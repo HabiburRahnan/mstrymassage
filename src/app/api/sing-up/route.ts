@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     let verifyCode = Math.floor(100000 + Math.random() * 900000).toString();
 
     if (existingUserByEmail) {
-      if (existingUserByEmail.isVerified) {
+      if (existingUserByEmail.isverified) {
         return Response.json(
           {
             success: false,
